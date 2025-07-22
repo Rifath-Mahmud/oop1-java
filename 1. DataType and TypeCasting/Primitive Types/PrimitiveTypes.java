@@ -1,5 +1,5 @@
 import java.lang.*;
-public class DataType{
+public class PrimitiveTypes{
 	public static void main(String[] args){
 		 // Declaring and initializing a boolean variable
         boolean flag = true; // Stores either true or false (1-bit logical data)
@@ -37,7 +37,7 @@ public class DataType{
 		
 		
 		 // === IMPLICIT CASTING (Widening: small -> large type) ===
-        System.out.println("\n=== Implicit Casting (Widening) ===");
+        System.out.println("\n--- Implicit Casting (Widening) ---");
         int fromByte = b;              // byte to int
         long fromShort = s;            // short to long
         float fromInt = i;             // int to float
@@ -51,7 +51,7 @@ public class DataType{
         System.out.println("char to int (ASCII): " + fromChar);
 
         // === EXPLICIT CASTING (Narrowing: large -> small type) ===
-        System.out.println("\n=== Explicit Casting (Narrowing) ===");
+        System.out.println("\n--- Explicit Casting (Narrowing) ---");
         byte toByte = (byte) s;            // short to byte (may lose data)
         short toShort = (short) i;         // int to short (possible overflow)
         int toInt = (int) d;               // double to int (fraction lost)
@@ -64,7 +64,7 @@ public class DataType{
         System.out.println("int to char: " + toChar);
         System.out.println("double to float: " + toFloat);
 
-        // === BOOLEAN NOTE ===
+        // Note for boolean
         System.out.println("\nNote: boolean type cannot be cast to or from any other type.");
 		
 	}
