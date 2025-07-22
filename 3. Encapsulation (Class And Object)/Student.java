@@ -7,27 +7,24 @@ public class Student {
     private String id;
     private int age;
     private float cgpa;
-	
-	public static int studentCount;
+    public static int studentCount;
 	
     // Default constructor
     public Student() {
         System.out.println("E-Constructor");
-		studentCount++;
+	studentCount++;
     }
 	
-
     // Parameterized constructor with name, id, age, and cgpa
     public Student(String name, String id, int age, float cgpa) {
-
-		System.out.println("P-Constructor");
+	System.out.println("P-Constructor");
         // Set the values using setter methods
-		setName(name);
+	setName(name);
         setId(id);
         setAge(age);
         setCgpa(cgpa);
 		
-		studentCount++;
+	studentCount++;
     }
 
     // Setter method for name
