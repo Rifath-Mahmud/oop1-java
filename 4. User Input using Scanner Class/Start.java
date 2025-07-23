@@ -22,8 +22,5 @@ public class Start {
 		System.out.print("Enter a Line: ");
 		String line = cinLine.nextLine();
 		System.out.println("Line: "+line);
-		
-		
-		
     }
 }
