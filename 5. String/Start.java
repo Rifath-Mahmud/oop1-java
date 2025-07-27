@@ -13,7 +13,7 @@ public class Start {
 		System.out.println(s1.equals(s3));
 		System.out.println(s2.equals(s3));
 		
-		String email = "jamal.uddin.karim@aiub.edu";
+		String email = "jamal.uddin.karim@gmail.edu";
 		System.out.println(email);
 		System.out.println("Length of Email: "+ email.length() );
 		System.out.println("Index of @: "+ email.indexOf('@') );
