@@ -25,7 +25,7 @@ public class Start{
 		
 		t2.showTeam();
 		
-		t1.transferPlayer(9,t2,5);
+		t1.transferPlayer(0,t2,5);
 		
 		t1.showTeam();
 		t2.showTeam();

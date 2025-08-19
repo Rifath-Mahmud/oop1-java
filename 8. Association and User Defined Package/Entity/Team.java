@@ -2,7 +2,6 @@ package Entity;
 public class Team{
 	private String teamName;
 	private Player players[];
-	private Coach coach;
 	
 	public Team(){
 		 players = new Player[14];
@@ -12,11 +11,17 @@ public class Team{
 		 this.teamName = teamName;
 		 players = new Player[teamSize];
 	}
-	
-	public String getTeamName(){return teamName;}
+	public void setTeamName(String teamName){
+		if(!teamName.isEmpty()){
+			this.teamName = teamName;
+		}
+	}
+	public String getTeamName(){
+		return teamName;
+	}
 	
 	public void insertPlayer(int pos, Player p){
-		if(pos>=0 && pos<=players.length){
+		if(pos>=0 && pos<players.length){
 			players[pos] = p;
 		}
 		else{
@@ -25,7 +30,7 @@ public class Team{
 	}
 	
 	public Player getPlayer(int pos){
-		if(pos>=0 && pos<=players.length){
+		if(pos>=0 && pos<players.length){
 			return players[pos];
 		}
 		else{ 
@@ -34,24 +39,27 @@ public class Team{
 	}
 	
 	public void removePlayer(int pos){
-		if(pos>=0 && pos<=players.length){
+		if(pos>=0 && pos<players.length){
 			players[pos] = null;
 		}
 	}
 	
-	public void transferPlayer(int fromPostion, Team t, int toPostion){
-		
-		if(this.getPlayer(fromPostion) != null){
-			
-			System.out.println("Transfering Player to "+ t.getTeamName());
-			t.insertPlayer(toPostion, this.getPlayer(fromPostion));
-			System.out.println("Removing Player from "+ teamName);
-			this.removePlayer(fromPostion);
-			System.out.println("Transfer Completed..");
-		}else{
-			System.out.println(" !! Transfer Failed");
-			System.out.println(" !! No Player Found at the Postion to be Transfered..");
-		}
+	public void transferPlayer(int fromPosition, Team t, int toPosition){
+			if(getPlayer(fromPosition)!=null){
+				System.out.println("*****************************");
+				System.out.println("Starting Transfer From "+ teamName);
+				System.out.println("Adding Player To "+ t.getTeamName());
+				getPlayer(fromPosition).showPlayer();
+				t.insertPlayer(toPosition,players[fromPosition]);
+				
+				System.out.println("Removing Player From "+ teamName);
+				removePlayer(fromPosition);
+				System.out.println("Transfer Completed ");
+				System.out.println("*****************************");
+			}
+			else{
+				System.out.println("Transfer Failed! (No Player Found) ");	
+			}
 	}
 	
 	public void showTeam(){
