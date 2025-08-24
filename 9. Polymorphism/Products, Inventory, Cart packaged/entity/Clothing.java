@@ -1,3 +1,4 @@
+package entity;
 public class Clothing extends Product{
 	private String size;
 	private String materials;
@@ -28,6 +29,7 @@ public class Clothing extends Product{
 		super.displayDetails();
 		System.out.println("Cloth Size: "+size);
 		System.out.println("Cloth Matetials: "+materials);
+		System.out.println("Quantity : "+super.getQuantity());
 		System.out.println("............................");
 	}
 }

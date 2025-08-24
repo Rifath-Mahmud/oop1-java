@@ -3,7 +3,7 @@ public class Product{
 	private String id;
 	private String name;
 	private double price;
-	private int quantity = 50;
+	private double quantity = 50;
 	
 	public Product(){
 		System.out.println("E-Product");
@@ -50,12 +50,15 @@ public class Product{
 		return price;
 	}
 	
-	public int getQuantity(){
+	public void setQuantity(double quantity){
+		this.quantity = quantity;
+	}
+	public double getQuantity(){
 		return quantity;
 	}
 	
-	public void addQuantity(int number){
-		this.quantity += number;
+	public void addQuantity(double quantity){
+		this.quantity += quantity;
 	}
 	
 	public void displayDetails(){

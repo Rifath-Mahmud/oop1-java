@@ -1,3 +1,4 @@
+package entity;
 public class Electronics extends Product{
 	private int months;
 	
@@ -25,6 +26,7 @@ public class Electronics extends Product{
 		System.out.println("............................");
 		System.out.println("Product-"+super.getId()+" "+super.getName());
 		System.out.println("Warranty Period: "+months);
+		System.out.println("Quantity : "+super.getQuantity());
 		System.out.println("............................");
 	}
 	

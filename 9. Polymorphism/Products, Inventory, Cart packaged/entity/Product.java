@@ -1,8 +1,9 @@
-import java.lang.*;
+package entity;
 public class Product{
 	private String id;
 	private String name;
 	private double price;
+	private double quantity = 50;
 	
 	public Product(){
 		System.out.println("E-Product");
@@ -49,11 +50,23 @@ public class Product{
 		return price;
 	}
 	
+	public void setQuantity(double quantity){
+		this.quantity = quantity;
+	}
+	public double getQuantity(){
+		return quantity;
+	}
+	
+	public void addQuantity(double quantity){
+		this.quantity += quantity;
+	}
+	
 	public void displayDetails(){
 		System.out.println(".....................");
 		System.out.println("Product Id: "+id);
 		System.out.println("Product Name: "+name);
 		System.out.println("Product Price: "+price);
+		System.out.println("Product Quantity: "+quantity);
 	}
 	public void displayDetails(double vat){
 		System.out.println(".....................");
@@ -62,4 +75,5 @@ public class Product{
 		System.out.println("Product Price: "+price);
 		System.out.println("Product Price With Vat: "+(price+price*vat));
 	}
+	
 }
