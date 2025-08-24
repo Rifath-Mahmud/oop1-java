@@ -24,7 +24,7 @@ public class Clothing extends Product{
 	public String getMaterials(){
 		return materials;
 	}
-	
+	@Override
 	public void displayDetails(){
 		super.displayDetails();
 		System.out.println("Cloth Size: "+size);

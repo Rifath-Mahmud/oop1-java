@@ -9,11 +9,17 @@ public class Product{
 		System.out.println("E-Product");
 	}
 	public Product(String id,String name,double price){
-		//this();
 		System.out.println("P-Product");
 		setId(id);
 		setName(name);
 		setPrice(price);
+	}
+	public Product(String id,String name,double price, double quantity){
+		System.out.println("P-Product");
+		setId(id);
+		setName(name);
+		setPrice(price);
+		setQuantity(quantity);
 	}
 	
 	public void setId(String id){
@@ -51,7 +57,9 @@ public class Product{
 	}
 	
 	public void setQuantity(double quantity){
-		this.quantity = quantity;
+		if(quantity>=0){			
+			this.quantity = quantity;
+		}
 	}
 	public double getQuantity(){
 		return quantity;
@@ -59,6 +67,11 @@ public class Product{
 	
 	public void addQuantity(double quantity){
 		this.quantity += quantity;
+	}
+	public void sellQuantity(double quantity){
+		if(quantity<= this.quantity){
+			this.quantity -= quantity;
+		}
 	}
 	
 	public void displayDetails(){

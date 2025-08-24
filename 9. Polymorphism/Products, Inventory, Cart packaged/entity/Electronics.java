@@ -21,7 +21,7 @@ public class Electronics extends Product{
 	}
 	
 	public int getMonths(){return months;}
-	
+	@Override
 	public void displayDetails(){
 		System.out.println("............................");
 		System.out.println("Product-"+super.getId()+" "+super.getName());
