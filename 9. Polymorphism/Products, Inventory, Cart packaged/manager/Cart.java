@@ -18,7 +18,7 @@ public class Cart{
 		}
 	}
 	
-	public CartItem getProduct(int itemNo){
+	public CartItem getCartItem(int itemNo){
 		return cartItems[itemNo];
 	}
 	
