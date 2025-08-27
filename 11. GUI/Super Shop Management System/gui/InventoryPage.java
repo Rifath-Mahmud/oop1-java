@@ -29,15 +29,15 @@ public class InventoryPage extends JFrame{
 		idField = createTextField(x+w+xGap,y,w,h,"");
 		y += h+yGap;
 		
-		nameLabel = createLabel(x,y,w,h,"Product ID");
+		nameLabel = createLabel(x,y,w,h,"Name");
 		nameField = createTextField(x+w+xGap,y,w,h,"");
 		y += h+yGap;
 		
-		priceLabel = createLabel(x,y,w,h,"Product ID");
+		priceLabel = createLabel(x,y,w,h,"Price");
 		priceField = createTextField(x+w+xGap,y,w,h,"");
 		y += h+yGap;
 		
-		quantityLabel = createLabel(x,y,w,h,"Product ID");
+		quantityLabel = createLabel(x,y,w,h,"Stock");
 		quantityField = createTextField(x+w+xGap,y,w,h,"");
 		y += h+yGap;
 		
