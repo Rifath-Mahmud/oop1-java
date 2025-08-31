@@ -11,6 +11,12 @@ public class Electronics extends Product{
 		System.out.println("P-Electronics");
 		setMonths(months); 
 	}
+	public Electronics(String id,String name,double price,double quantity, int months){
+		super(id,name,price,quantity);
+		System.out.println("P-Electronics");
+		setMonths(months); 
+	}
+	
 	public void setMonths(int months){
 		if(months>=0){
 			this.months = months;
@@ -29,5 +35,19 @@ public class Electronics extends Product{
 		System.out.println("Quantity : "+super.getQuantity());
 		System.out.println("............................");
 	}
+	
+	@Override
+	public String toString(){
+		String data = "";
+		
+		data+= "............................"+"\n";
+		data+= "Product-"+super.getId()+" "+super.getName()+"\n";
+		data+= "Warranty Period: "+months+"\n";
+		data+= "Quantity : "+super.getQuantity()+"\n";
+		data+= "............................"+"\n";
+		
+		return data;
+	}
+	
 	
 }

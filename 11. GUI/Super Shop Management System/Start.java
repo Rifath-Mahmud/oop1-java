@@ -12,13 +12,10 @@ public class Start {
 
 		
 		/*
-		Inventory inventory = new Inventory(500);
+		
 		//inventory.addProduct(0, new Product("101","P1",200,30));
 		//inventory.addProduct(1, new Product("102","P2",300,30));
-		inventory.addProduct(2, new Electronics("103","E1",3000,12));
-		inventory.addProduct(3, new Electronics("104","E2",2500,12));
-		inventory.addProduct(4, new Clothing("105","C1",1500,"XL","Cotton"));
-		inventory.addProduct(5, new Clothing("106","C2",800,"L","Cotton"));
+		
 		
 		// inventory.showInventory();
 		inventory.getProduct(4).setQuantity(15);

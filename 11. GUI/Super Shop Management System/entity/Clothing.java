@@ -34,4 +34,19 @@ public class Clothing extends Product{
 		System.out.println("Quantity : "+super.getQuantity());
 		System.out.println("............................");
 	}
+	
+	
+	@Override
+	public String toString(){
+		String data = "";
+		data+= "Id: "+super.getId()+"\n";
+		data+= "Name: "+super.getName()+"\n";
+		data+= "Price: "+super.getPrice()+"\n";
+		data+= "Cloth Size: "+size+"\n";
+		data+= "Cloth Matetials: "+materials+"\n";
+		data+= "Quantity : "+super.getQuantity()+"\n";
+		data+= "............................"+"\n";
+		
+		return data;
+	}
 }

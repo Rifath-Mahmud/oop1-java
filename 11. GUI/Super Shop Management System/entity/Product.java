@@ -75,6 +75,7 @@ public abstract class Product{
 	}
 	
 	public abstract void displayDetails();
+	public abstract String toString();
 	// public void displayDetails(double vat){
 		// System.out.println(".....................");
 		// System.out.println("Product Id: "+id);

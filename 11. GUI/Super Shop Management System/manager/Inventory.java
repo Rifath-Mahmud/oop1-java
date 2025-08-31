@@ -44,4 +44,19 @@ public class Inventory implements IInventoryOperations{
 		}
 		System.out.println("-------------------------------------------");
 	}
+	
+	
+	public String toString(){
+		String allData = "";
+		
+		allData+= "------------ Inventory Details --------------"+"\n";
+		for(Product p : products){
+			if(p!=null){
+				allData += p.toString();
+			}
+		}
+		allData+="-------------------------------------------"+"\n";
+		
+		return allData;
+	}
 }
