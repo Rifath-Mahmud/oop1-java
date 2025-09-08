@@ -42,9 +42,10 @@ public class Electronics extends Product{
 		
 		data+= "............................"+"\n";
 		data+= "Product-"+super.getId()+" "+super.getName()+"\n";
-		data+= "Warranty Period: "+months+"\n";
 		data+= "Quantity : "+super.getQuantity()+"\n";
-		data+= "............................"+"\n";
+		data+= "Price Per Unit : "+super.getPrice()+"\n";
+		data+= "Warranty Period: "+months+"\n";
+		//data+= "............................"+"\n";
 		
 		return data;
 	}

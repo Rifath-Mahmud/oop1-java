@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 import entity.*;
 import manager.*;
+import files.*;
 
 public class InventoryPage implements ActionListener{
 	JFrame frame = new JFrame("Inventory Page");
@@ -14,7 +15,7 @@ public class InventoryPage implements ActionListener{
 	
 	JLabel noLabel, idLabel, nameLabel, priceLabel, quantityLabel, monthsLabel;
 	JTextField noField, idField, nameField, priceField, quantityField, monthsField;
-	JButton addBtn, updateBtn, deleteBtn;
+	JButton addBtn, updateBtn, deleteBtn,saveBtn;
 	JTextArea screen;
 	
 	Inventory inventory = new Inventory(500);
@@ -28,12 +29,7 @@ public class InventoryPage implements ActionListener{
 		frame.setIconImage(new ImageIcon("./images/icon.png").getImage());
 		
 		//========== Inventory Data Initialization =======
-		inventory.addProduct(0, new Electronics("100","E0",5000,6));
-		inventory.addProduct(1, new Electronics("101","E1",3400,12));
-		inventory.addProduct(2, new Electronics("102","E2",2800,24));
-		inventory.addProduct(3, new Electronics("103","E3",2500,3));
-		inventory.addProduct(4, new Clothing("104","C1",1500,"XL","Cotton"));
-		inventory.addProduct(5, new Clothing("105","C2",800,"L","Cotton"));
+		FileIO.loadFromFile(inventory);
 		
 		//System.out.println(inventory.toString());
 		
@@ -84,7 +80,12 @@ public class InventoryPage implements ActionListener{
 		updateBtn = createButton(x,y,210,h,"Update");
 		updateBtn.setBackground(Color.BLUE);
 		updateBtn.setForeground(Color.WHITE);
+		y += h+yGap;
 		
+		saveBtn = createButton(x,y,210,h,"Save");
+		saveBtn.setBackground(Color.YELLOW);
+		saveBtn.setForeground(Color.WHITE);
+		y += h+yGap;
 		
 		
 		screen = new JTextArea();
@@ -143,6 +144,8 @@ public class InventoryPage implements ActionListener{
 			!priceField.getText().isEmpty() &&
 			!quantityField.getText().isEmpty() &&
 			!monthsField.getText().isEmpty()){
+				
+				try{
 				int no = Integer.parseInt( noField.getText() );
 				String id = idField.getText();
 				String name = nameField.getText();
@@ -161,7 +164,10 @@ public class InventoryPage implements ActionListener{
 				priceField.setText("");
 				quantityField.setText("");
 				monthsField.setText("");
-				
+				}
+				catch(NumberFormatException e){
+					JOptionPane.showMessageDialog(frame,e.getMessage());
+				}
 			}
 			else{
 				JOptionPane.showMessageDialog(frame,"Enter All Data","Warning", JOptionPane.WARNING_MESSAGE);
@@ -172,6 +178,13 @@ public class InventoryPage implements ActionListener{
 		}
 		else if(ae.getSource() == updateBtn){
 			System.out.println("Update Button Clicked");
+		}
+		else if(ae.getSource() == saveBtn){
+			
+			int option = JOptionPane.showConfirmDialog(frame,"Are You Sure to Save?");
+			if(option == JOptionPane.YES_OPTION){
+				FileIO.writeInFile(inventory);
+			}
 		}
 	}
 	

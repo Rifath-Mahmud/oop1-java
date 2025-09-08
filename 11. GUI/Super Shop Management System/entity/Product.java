@@ -3,7 +3,7 @@ public abstract class Product{
 	private String id;
 	private String name;
 	private double price;
-	private double quantity = 50;
+	private double quantity;
 	
 	public Product(){
 		System.out.println("E-Product");

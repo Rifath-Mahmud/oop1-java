@@ -13,6 +13,13 @@ public class Clothing extends Product{
 		setMaterials(materials);
 	}
 	
+	public Clothing(String id,String name,double price,double quantity, String size, String materials){
+		super(id,name,price,quantity);
+		System.out.println("P-Clothing");
+		setSize(size);
+		setMaterials(materials);
+	}
+	
 	public void setSize(String size){
 		this.size = size;
 	}
@@ -39,13 +46,13 @@ public class Clothing extends Product{
 	@Override
 	public String toString(){
 		String data = "";
+		data+= "............................"+"\n";
 		data+= "Id: "+super.getId()+"\n";
 		data+= "Name: "+super.getName()+"\n";
 		data+= "Price: "+super.getPrice()+"\n";
 		data+= "Cloth Size: "+size+"\n";
 		data+= "Cloth Matetials: "+materials+"\n";
 		data+= "Quantity : "+super.getQuantity()+"\n";
-		data+= "............................"+"\n";
 		
 		return data;
 	}

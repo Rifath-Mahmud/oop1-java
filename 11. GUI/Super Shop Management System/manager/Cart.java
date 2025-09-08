@@ -8,30 +8,32 @@ public class Cart{
 	public Cart(int size){
 		cartItems = new CartItem[size];
 	}
-	public void addProduct(int itemNo, Product p,double quantity){
+	public boolean addItem(int itemNo, Product p,double quantity){
 		if(itemNo>=0 && itemNo<cartItems.length && p.getQuantity()>= quantity){
 			cartItems[itemNo] = new CartItem(p,quantity);
+			return true;
 		}
 		else{
 			p.displayDetails();
 			System.out.println("Out of Stock for Quantity : "+ quantity);
+			return false;
 		}
 	}
 	
-	public CartItem getProduct(int itemNo){
+	public CartItem getItem(int itemNo){
 		return cartItems[itemNo];
 	}
 	
-	// public Product getProductById(String id){
-		// for(Product p : products){
-			// if(p!=null){
-				// if(p.getId().equals(id)){
-					// return p;
-				// }
-			// }
-		// }
-		// return null;
-	// }
+	public Product getProductById(String id){
+		for(CartItem item : cartItems){
+			if(item!=null){
+				if(item.getProduct().getId().equals(id)){
+					return item.getProduct();
+				}
+			}
+		}
+		return null;
+	}
 	
 	public void remove(int itemNo){
 		cartItems[itemNo] = null;
@@ -59,5 +61,25 @@ public class Cart{
 				item.sellProduct();
 			}
 		}
+		cartItems = new CartItem[1000];
 	}
+	
+	
+	public String toString(){
+		String allData = "";
+		allData+= "------------------- Cart Details -------------------\n";
+		double totalCost = 0;
+		for(CartItem item : cartItems){
+			if(item!=null){
+				totalCost += item.getBill();
+				allData += item.toString();
+			}
+		}
+		allData+="-----------------------\n";
+		allData+="# Total Bill: "+totalCost+"\n";
+		allData+="-----------------------\n";
+		return allData;
+	}
+	
+	
 }

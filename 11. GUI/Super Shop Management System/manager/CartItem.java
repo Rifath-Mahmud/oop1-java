@@ -35,4 +35,9 @@ public class CartItem{
 	public void showItem(){
 		System.out.println(product.getId()+" | "+product.getName()+" | "+product.getPrice()+" | "+ quantity+ " | "+ getBill() );
 	}
+	public String toString(){
+		return product.getId()+" | "+product.getName()+" | "+product.getPrice()+" | "+ quantity+ " | "+ getBill() + "\n";
+	}
+	
+	
 }

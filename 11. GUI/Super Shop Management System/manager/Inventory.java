@@ -50,13 +50,20 @@ public class Inventory implements IInventoryOperations{
 		String allData = "";
 		
 		allData+= "------------ Inventory Details --------------"+"\n";
-		for(Product p : products){
-			if(p!=null){
-				allData += p.toString();
+		for(int i=0;i<products.length;i++){
+			if(products[i]!=null){
+				allData+= "~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+				allData+= "Product No: "+i+"\n";
+				allData += products[i].toString();
 			}
 		}
 		allData+="-------------------------------------------"+"\n";
 		
 		return allData;
 	}
+	
+	public Product[] getAll(){
+		return products;
+	}
+	
 }

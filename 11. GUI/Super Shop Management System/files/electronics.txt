@@ -1,0 +1,22 @@
+100;Samsung Galaxy S22;7588.0;50.0;6
+101;iPhone 14 Pro;5527.0;50.0;12
+102;Dell XPS 13 Laptop;8977.0;50.0;24
+103;Sony WH-1000XM5 Headphones;7689.0;50.0;36
+104;Apple MacBook Air M2;5664.0;50.0;6
+105;Samsung QLED TV;5059.0;50.0;24
+106;Canon EOS R10 Camera;5693.0;50.0;6
+107;Bose SoundLink Speaker;4154.0;50.0;12
+108;Asus ROG Gaming Laptop;8064.0;50.0;36
+109;Lenovo ThinkPad X1;5084.0;50.0;36
+110;HP Envy Printer;3253.0;50.0;6
+111;Logitech MX Master Mouse;5793.0;50.0;36
+112;Microsoft Surface Pro 9;3437.0;50.0;36
+113;Nintendo Switch OLED;8433.0;50.0;6
+114;PlayStation 5;2248.0;50.0;12
+115;Xbox Series X;9863.0;50.0;36
+116;Fitbit Charge 5;8241.0;50.0;36
+117;GoPro Hero 11;7737.0;50.0;12
+118;JBL Flip 6;3606.0;50.0;12
+119;Kindle Paperwhite;6230.0;50.0;6
+220;asd;123.0;123.0;123
+220;ETest;20.0;20.0;1
