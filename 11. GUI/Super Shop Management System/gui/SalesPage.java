@@ -7,7 +7,7 @@ import entity.*;
 import manager.*;
 import files.*;
 public class SalesPage implements ActionListener{
-	JFrame frame = new JFrame("Inventory Page");
+	JFrame frame = new JFrame("Sales Page");
 	Font font15 = new Font("Cambria",Font.BOLD,15);
 	Font font20 = new Font("Cambria",Font.BOLD,20);
 	
