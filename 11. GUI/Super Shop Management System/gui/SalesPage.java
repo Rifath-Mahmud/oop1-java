@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import entity.*;
 import manager.*;
-
+import files.*;
 public class SalesPage implements ActionListener{
 	JFrame frame = new JFrame("Inventory Page");
 	Font font15 = new Font("Cambria",Font.BOLD,15);
@@ -30,14 +30,7 @@ public class SalesPage implements ActionListener{
 		frame.setIconImage(new ImageIcon("/images/icon.png").getImage());
 		
 		//========== Inventory Data Initialization =======
-		inventory.addProduct(0, new Electronics("100","E0",5000,6));
-		inventory.addProduct(1, new Electronics("101","E1",3400,12));
-		inventory.addProduct(2, new Electronics("102","E2",2800,24));
-		inventory.addProduct(3, new Electronics("103","E3",2500,3));
-		inventory.addProduct(4, new Clothing("104","C1",1500,"XL","Cotton"));
-		inventory.addProduct(5, new Clothing("105","C2",800,"L","Cotton"));
-		
-		//System.out.println(inventory.toString());
+		FileIO.loadFromFile(inventory);
 		
 		//================================================
 		
